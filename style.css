@@ -6,6 +6,18 @@ body{
     line-height: 1.4;
 }
 
+.bg-dark{ color: white;background-color: #111111;}
+.txt-align-center{text-align: center;}
+.text-grey{color: grey;}
+.d-flex{display: flex;}
+.flex-col{flex-direction: column;}
+.jfy-around{justify-content: space-around;}
+.jfy-center{justify-content: center;}
+.item-center{align-items: center;}
+.btn-primary{background-color: #21AFFF;}
+.bold{ font-weight: 400;}
+.mt-2{margin-top: 20px;}
+
 .box{
     height: 100vh;
     width: 100%;
@@ -28,9 +40,17 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+.cont-prese{
+    min-height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 .pos-bottom{
-    position: relative;
-    top: 90vh;
+    width:800px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
 }
 /*////////////////Presentation///////////////*/
 .present{
@@ -115,29 +135,21 @@ form input::placeholder{
     margin:0 auto;
 }
 
-.bg-dark{ color: white;background-color: #111111;}
-.txt-align-center{text-align: center;}
-.text-grey{color: grey;}
-.d-flex{display: flex;}
-.flex-col{flex-direction: column;}
-.jfy-around{justify-content: space-around;}
-.jfy-center{justify-content: center;}
-.item-center{align-items: center;}
-.btn-primary{background-color: #21AFFF;}
-.bold{ font-weight: 400;}
-.mt-2{margin-top: 20px;}
 
 @media(max-width: 750px){
     body{font-size: 16px;}
     .container{width: 100%;}
-    .box{ height: max-content;}
-
+    .box{ 
+        height: max-content;
+    }
+    .cont-prese{
+        min-height: auto;
+    }
     /*landing*/
     .logo{
         display:flex;
         justify-content: center;
         align-items: center;
-        padding-top: 15%;
     }
     .logo img{
         width: 150px;
@@ -145,19 +157,20 @@ form input::placeholder{
     .landing{
         background-image: unset;
     }
-    .pos-bottom{
-        width: 90%;
-        margin:0 auto;
-        font-size: 18px;
-        position: unset;
-        margin-bottom: 50px;
-    }
     /*présentation*/
     
     .text-present{
         width: 100%;
         margin: 0;
         text-align: left;
+    }
+    
+    .pos-bottom{
+        width: 400px;
+        margin:0 auto;
+        font-size: 18px;
+        position: unset;
+        margin-bottom: 50px;
     }
     .small{
         width: 100%;
@@ -173,15 +186,20 @@ form input::placeholder{
         width: 100%;
     }
     /*offer*/
+
 }
 
 @media(max-width: 1150px){
     .box{
-        height: 100vh;
+        height: max-content;
+        padding: 25px 0;
         width: 100%;
     }
     .content{ width: 90%;}
-    .pos-bottom{ width: 650px}
+    .pos-bottom{ 
+        width: 90%; 
+        text-align: center;
+    }
 
     /*Presente*/
     .splite img, .splite .graphe, .splite .connexion{
